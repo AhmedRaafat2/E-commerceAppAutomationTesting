@@ -18,13 +18,11 @@ public class LoginStepDefinition {
     HomePage homePage;
 LoginPage loginPage;
 
-
     @And("user clicked on login link")
     public void userClickedOnLoginLink() {
         homePage = new HomePage(driver);
         homePage.loginClick();
     }
-
 
     @And("user entered email for login")
     public void userEnteredEmailForLogin() {
@@ -40,6 +38,11 @@ LoginPage loginPage;
     @And("user clicked on login button")
     public void userClickedOnLoginButton() {
         loginPage.clickLogIn();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Then("user should have a success message for login")

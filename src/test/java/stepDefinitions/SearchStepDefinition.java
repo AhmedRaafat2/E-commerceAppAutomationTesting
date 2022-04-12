@@ -10,7 +10,6 @@ import static stepDefinitions.HomePageStepDefinition.driver;
 public class SearchStepDefinition {
 
     HomePage homePage;
-    LoginPage loginPage;
 
     @And("user enter name of item to search for")
     public void userEnterNameOfItemToSearchFor() {

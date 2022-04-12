@@ -10,15 +10,11 @@ import static stepDefinitions.HomePageStepDefinition.driver;
 public class ChangeCurrencyStepDefinition {
 
     HomePage homePage;
-    LoginPage loginPage;
-
-
 
     @And("user change currency from usd to euro")
     public void userChangeCurrencyFromUsdToEuro() {
         homePage = new HomePage(driver);
         homePage.changeCurrencyFromUsdToEuro();
-
     }
 
     @Then("all products shown are in euro")

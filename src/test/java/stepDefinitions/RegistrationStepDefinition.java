@@ -1,33 +1,16 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
 import pages.RegistrationPage;
 
 import static stepDefinitions.HomePageStepDefinition.driver;
 
 public class RegistrationStepDefinition {
-//    WebDriver driver;
+
     HomePage homePage;
     RegistrationPage registrationPage;
-
-//    @Given("user open browser")
-//    public void openBrowser() {
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        homePage = new HomePage(driver);
-//    }
-//
-//    @And("user navigate to home page")
-//    public void openHomePage() {
-//        homePage.openHomePage();
-//    }
 
     @And("user clicked on register link")
     public void clickOnRegisterButton() {
@@ -77,10 +60,5 @@ public class RegistrationStepDefinition {
     @And("user clicked on register button")
     public void userClickedOnRegisterButton() {
     }
-
-
-    //@And("user clicked on register button")
-
-
 
 }

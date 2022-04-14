@@ -18,6 +18,9 @@ public class LoginPage {
     @FindBy(linkText = "Forgot password?")
     WebElement forgetPassword;
 
+    @FindBy(xpath = "//body/div[6]/div[2]/ul[1]/li[5]/a[1]")
+    WebElement booksCat;
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -35,6 +38,9 @@ public class LoginPage {
     }
     public void clickForgetPassword(){
         forgetPassword.click();
+    }
+    public void clickOnBooksCat(){
+        booksCat.click();
     }
 
 

@@ -1,12 +1,17 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class HomePage {
 
@@ -38,6 +43,19 @@ public class HomePage {
     WebElement redColor;
     @FindBy(xpath = "//a[contains(text(),'Search')]")
     WebElement searchPage;
+
+
+
+
+
+
+//    @FindBy(xpath = "//button[@class=\"button-2 product-box-add-to-cart-button\"]")
+//    WebElement addToCard;
+//    @FindBy(xpath = "//button[@class=\"button-2 add-to-wishlist-button\"]")
+//    WebElement addToFav;
+//    @FindBy(xpath = "//button[@class=\"button-2 add-to-compare-list-button\"]")
+//    WebElement addToCompare;
+
 
     WebDriver driver;
 
@@ -102,5 +120,10 @@ public class HomePage {
     public void openSearchPage() {
         searchPage.click();
     }
+
+
+
+
+
 
 }

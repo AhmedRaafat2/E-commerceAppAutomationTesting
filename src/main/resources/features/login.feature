@@ -1,7 +1,8 @@
 Feature: User could log in
+  Background:
+    Given user navigate to home page
+
   Scenario: SC2- User could log in with valid email and password
-    Given user open browser
-    And user navigate to home page
     And user clicked on login link
     And user entered email for login
     And user entered password for login

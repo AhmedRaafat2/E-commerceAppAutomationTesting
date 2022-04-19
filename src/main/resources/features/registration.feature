@@ -1,8 +1,9 @@
-Feature: User registeration
-  Scenario: SC1- User could register with valid data
-    Given user open browser
-    And user navigate to home page
+Feature: User registration
+  Background:
+    Given user navigate to home page
     And user clicked on register link
+
+  Scenario: SC1- User could register with valid data
     When user selected gender
     And user entered first name
     And user entered last name

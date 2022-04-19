@@ -2,13 +2,13 @@ package stepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import pages.HomePage;
-import pages.LoginPage;
-
-import static stepDefinitions.HomePageStepDefinition.driver;
+import static stepDefinitions.Hooks.driver;
 
 public class ChangeColorFilter {
-
     HomePage homePage;
 
     @And("user hover on apparel category")
@@ -29,5 +29,7 @@ public class ChangeColorFilter {
 
     @Then("shoes with red color only should appear to the user")
     public void shoesWithRedColorOnlyShouldAppearToTheUser() {
+        WebElement redCheckBox = driver.findElement(By.id("attribute-option-15"));
+        Assert.assertTrue(redCheckBox.isSelected());
     }
 }

@@ -74,7 +74,6 @@ public class RegistrationPage {
         yearSelect.selectByValue(String.valueOf(year));
     }
 
-
     public void setEmail(String email){
         emailEditText.sendKeys(email);
     }
@@ -82,8 +81,6 @@ public class RegistrationPage {
     public void setCompanyName(String company){
         companyNameEditText.sendKeys(company);
     }
-
-
 
     public void selectNewsLetter(){
         if (!newsletterCheckBox.isSelected()){

@@ -2,13 +2,12 @@ package stepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.testng.Assert;
 import pages.HomePage;
-import pages.LoginPage;
 
-import static stepDefinitions.HomePageStepDefinition.driver;
+import static stepDefinitions.Hooks.driver;
 
 public class SelectDifferentCategories {
-
     HomePage homePage;
 
     @And("user hover on electronic category")
@@ -22,7 +21,9 @@ public class SelectDifferentCategories {
         homePage.clickOnCellPhoneCat();
     }
 
-    @Then("cell phones should appear to the user")
-    public void cellPhonesShouldAppearToTheUser() {
+    @Then("cell phones page should appear to the user")
+    public void cellPhonesAppear() {
+        String expectedUrl = "https://demo.nopcommerce.com/cell-phones";
+        Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
 }

@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
 public class BooksPage {
@@ -22,8 +21,6 @@ public class BooksPage {
     WebElement shoppingCartLink;
 
     WebDriver driver;
-
-
 
     public BooksPage(WebDriver driver) {
         this.driver = driver;
@@ -41,7 +38,6 @@ public class BooksPage {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
     public void addItemsToFav() {
@@ -54,7 +50,6 @@ public class BooksPage {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
     public void addItemsToCompare() {
@@ -67,7 +62,6 @@ public class BooksPage {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
 

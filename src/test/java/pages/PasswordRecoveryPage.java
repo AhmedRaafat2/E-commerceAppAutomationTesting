@@ -14,7 +14,6 @@ public class PasswordRecoveryPage {
     @FindBy(name = "send-email")
     WebElement recoveryPasswordButton;
 
-
     public PasswordRecoveryPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);

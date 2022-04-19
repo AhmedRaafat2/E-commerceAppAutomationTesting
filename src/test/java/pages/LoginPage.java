@@ -43,5 +43,4 @@ public class LoginPage {
         booksCat.click();
     }
 
-
 }

@@ -1,8 +1,9 @@
-Feature: User could log in
-  Scenario: SC2- User could log in with valid email and password
-    Given user open browser
-    And user navigate to home page
+Feature: User could reset his/her password
+  Background:
+    Given user navigate to home page
     And user clicked on login link
+
+  Scenario: SC3- User could reset his/her password successfully
     And user clicked on forgot password
     And user entered email for reset password
     And user clicked on recover button

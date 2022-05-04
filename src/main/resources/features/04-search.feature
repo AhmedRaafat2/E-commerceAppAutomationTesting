@@ -1,7 +1,8 @@
-Feature: Logged User could search
+Feature: SC4- Logged User could search
   Background:
     Given user navigate to home page
 
+  @scenario4
   Scenario: SC4- Logged User could search for any product
     And user clicked on login link
     And user entered email for login

@@ -1,4 +1,4 @@
-Feature: SC9- Logged user could add different products to Shopping cart
+Feature: SC10- Logged user could add different products to Wishlist
 
   Background:
     Given user navigate to home page
@@ -8,7 +8,8 @@ Feature: SC9- Logged user could add different products to Shopping cart
     And user clicked on login button
     And user navigate to books pages
 
-  Scenario: Logged user could add different products to Shopping cart
+  @scenario10
+  Scenario: SC10- Logged user could add different products to Wishlist
     And user add items to whish list
     And user navigate to whish list
     Then added items should appear at whish list

@@ -1,4 +1,4 @@
-Feature: SC9- Logged user could add different products to Shopping cart
+Feature: SC12- Create successful Order
 
   Background:
     Given user navigate to home page
@@ -7,8 +7,12 @@ Feature: SC9- Logged user could add different products to Shopping cart
     And user entered password for login
     And user clicked on login button
     And user navigate to books pages
-
-  Scenario: Logged user could add different products to Shopping cart
     And user add items to shopping cart
     And user navigate to shopping cart
-    Then added items should appear at shopping cart
+    And user complete order
+
+  @scenario12
+  Scenario: SC12- Create successful Order
+
+
+    Then order placed successfully

@@ -14,7 +14,8 @@ import io.cucumber.testng.CucumberOptions;
                 "junit:target/cukes.xml",
                 "rerun:target/rerun.txt"},
         dryRun = false
-//        , tags = "@smoke"
+        //tags = "@scenario1 then @scenario2"
+        //@scenario2, @scenario3, @scenario4, @scenario5, @scenario6, @scenario7, @scenario8, @scenario9, @scenario10, @scenario11, @scenario12""
 )
 
 

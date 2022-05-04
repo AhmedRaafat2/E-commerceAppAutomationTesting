@@ -6,11 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.BooksPage;
+import pages.WishListPage;
+
 import java.util.List;
 import static stepDefinitions.Hooks.driver;
 
 public class AddToWishList {
     BooksPage booksPage;
+    WishListPage wishListPage;
 
     @And("user add items to whish list")
     public void userAddItemsToWhishList() {
@@ -25,20 +28,20 @@ public class AddToWishList {
 
     @Then("added items should appear at whish list")
     public void addedItemsShouldAppearAtWhishList() {
-        List<WebElement> itemsName = driver.findElements(By.xpath("//a[@class=\"product-name\"]"));
+        wishListPage = new WishListPage(driver);
+        List<WebElement> itemsName = (List<WebElement>) wishListPage.getWishListItemNames();
         Assert.assertEquals(itemsName.get(0).getText(),"Fahrenheit 451 by Ray Bradbury");
         Assert.assertEquals(itemsName.get(1).getText(),"First Prize Pies");
         Assert.assertEquals(itemsName.get(2).getText(),"Pride and Prejudice");
 
-        List<WebElement> itemsQty = driver.findElements(By.xpath("//input[@class=\"qty-input\"]"));
+        List<WebElement> itemsQty = wishListPage.getWishListItemQty();
         int qty = 0;
         for (WebElement qtyElement : itemsQty){
-            qty += Integer.getInteger(qtyElement.getAttribute("value"));
+            qty += Integer.parseInt(qtyElement.getAttribute("value"));
         }
         System.out.println("qty : "+qty);
         Assert.assertEquals(qty,3);
 
-        WebElement whishListTitle = driver.findElement(By.xpath("//h1"));
-        Assert.assertEquals(whishListTitle.getText(), "Wishlist");
+        Assert.assertEquals(wishListPage.getWishListTitle(), "Wishlist");
     }
 }

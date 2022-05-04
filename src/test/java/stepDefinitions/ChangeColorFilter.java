@@ -6,10 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.HomePage;
+import pages.ShoesPage;
+
 import static stepDefinitions.Hooks.driver;
 
 public class ChangeColorFilter {
     HomePage homePage;
+    ShoesPage shoesPage;
 
     @And("user hover on apparel category")
     public void userHoverOnAppearlCategory() {
@@ -24,12 +27,12 @@ public class ChangeColorFilter {
 
     @And("user change color to red")
     public void userChangeColorToRed() {
-        homePage.selectRedColor();
+        shoesPage = new ShoesPage(driver);
+        shoesPage.selectRedColor();
     }
 
     @Then("shoes with red color only should appear to the user")
     public void shoesWithRedColorOnlyShouldAppearToTheUser() {
-        WebElement redCheckBox = driver.findElement(By.id("attribute-option-15"));
-        Assert.assertTrue(redCheckBox.isSelected());
+        Assert.assertTrue(shoesPage.isRedColorSelected());
     }
 }

@@ -1,4 +1,4 @@
-Feature: Logged user could select different Categories
+Feature: SC6- Logged user could select different Categories
   Background:
     Given user navigate to home page
     And user clicked on login link
@@ -6,6 +6,7 @@ Feature: Logged user could select different Categories
     And user entered password for login
     And user clicked on login button
 
+  @scenario6
   Scenario: SC6- Logged user could select different Categories
     And user hover on electronic category
     And user click on cellPhone category

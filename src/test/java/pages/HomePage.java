@@ -28,8 +28,7 @@ public class HomePage {
     WebElement apparelCat;
     @FindBy(xpath = "//body/div[6]/div[2]/ul[1]/li[3]/ul[1]/li[1]/a[1]")
     WebElement shoesCat;
-    @FindBy(id = "attribute-option-15")
-    WebElement redColor;
+
     @FindBy(xpath = "//a[contains(text(),'Search')]")
     WebElement searchPage;
     WebDriver driver;
@@ -83,9 +82,7 @@ public class HomePage {
         shoesCat.click();
     }
 
-    public void selectRedColor() {
-        redColor.click();
-    }
+
 
     public void openSearchPage() {
         searchPage.click();

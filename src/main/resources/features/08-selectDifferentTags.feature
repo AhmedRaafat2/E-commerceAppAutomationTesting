@@ -6,7 +6,8 @@ Feature: SC8- Logged user could select different tags
     And user entered password for login
     And user clicked on login button
 
-  Scenario: Logged user could select awesome tag
+  @scenario8
+  Scenario: SC8- Logged user could select awesome tag
     And user open search page
     And user choose awesome tag
     Then awesome products page should appear to the user

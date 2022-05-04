@@ -5,11 +5,12 @@ import io.cucumber.java.en.Then;
 import org.testng.Assert;
 import pages.HomePage;
 import pages.SearchPage;
-
+import pages.TagsPage;
 import static stepDefinitions.Hooks.driver;
 
 public class SelectDifferentTags {
     HomePage homePage;
+    TagsPage tagsPage;
 SearchPage searchPage;
 
     @And("user open search page")
@@ -27,7 +28,8 @@ SearchPage searchPage;
 
     @Then("awesome products page should appear to the user")
     public void awesomeProductAppear() {
+        tagsPage = new TagsPage(driver);
         String awesomeUrl = "https://demo.nopcommerce.com/awesome";
-        Assert.assertEquals(driver.getCurrentUrl(), awesomeUrl);
+        Assert.assertEquals(tagsPage.getTagsUrl(), awesomeUrl);
     }
 }

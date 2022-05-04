@@ -1,4 +1,4 @@
-Feature: Logged user could filter with color
+Feature: SC7- Logged user could filter with color
   #SC7- Logged user could filter with color
   Background:
     Given user navigate to home page
@@ -7,7 +7,8 @@ Feature: Logged user could filter with color
     And user entered password for login
     And user clicked on login button
 
-  Scenario: Logged user could filter with red color
+  @scenario7
+  Scenario: SC7- Logged user could filter with red color
     And user hover on apparel category
     And user click on shoes category
     And user change color to red

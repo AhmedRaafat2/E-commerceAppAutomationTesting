@@ -1,8 +1,9 @@
-Feature: User registration
+Feature: SC1- User registration
   Background:
     Given user navigate to home page
     And user clicked on register link
 
+  @scenario1
   Scenario: SC1- User could register with valid data
     When user selected gender
     And user entered first name
